@@ -6,6 +6,8 @@ options(stringsAsFactors = FALSE)
 wages <- read.csv("data/wages.csv")
 crime <- read.csv("data/crime.csv")
 
+## hello, this is a comment.
+
 # Estimating a function
 
 mod <- lm(tc2009 ~ low, data = crime)
@@ -114,7 +116,9 @@ m2 <- lm(earn ~ height + sex, data = wages)
 coef(m1)
 coef(m2)
 
-qplot(height, earn, data = wages, alpha = I(1/10), color = sex) + theme_bw() + geom_line(aes(y = predict(m2)))
+qplot(height, earn, data = wages, alpha = I(1/10), color = sex) +
+  theme_bw() +
+  geom_line(aes(y = predict(m2)))
 
 # Your Turn
 # ---------------------------------------
